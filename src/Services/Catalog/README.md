@@ -48,3 +48,47 @@ To drill down to particular container then we need to use following command
 ``` bash
 docker exec -it shopping-mongo /bin/bash
 ```
+This will open interactive (-it) mongo shell command
+Following are the mongo commands
+To see what does this container contains we can use ls
+``` bash
+ls
+```
+To see all the databases that mongo instance contains
+``` bash
+show dbs
+```
+To create a new database
+``` bash
+use CatalogDB
+```
+It will be switched to CatalogDB
+To create a new collection
+``` bash
+db.createCollection('Products')
+```
+If you want to insert collection inside **Product** collection then we need to use following command
+``` bash
+db.Products.insert()
+```
+If you want to insert multiple then following command can be used
+``` bash
+db.Products.insertMany()
+```
+To see records in product collections then 
+``` bash
+db.Products.find({}).pretty()
+```
+To delete records in product collections
+then
+``` bash
+db.Products.remove({})
+```
+To see different collections
+``` bash
+show collections
+```
+
+If we want to work with MongoDB in .NET core then we need to install
+> MongoDB.Driver
+
