@@ -14,6 +14,15 @@ To check whether docker is running in our system
 ``` bash
 docker ps
 ```
+To display all the images
+``` bash
+docker ps -a
+```
+To start container, we have to provide Container Name
+``` bash
+docker start a141 
+```
+Here the above id  **a141*****ce8e61c6***
 To pull mongo image from docker hub
 ``` bash
 docker pull mongo
@@ -49,6 +58,11 @@ To drill down to particular container then we need to use following command
 docker exec -it shopping-mongo /bin/bash
 ```
 This will open interactive (-it) mongo shell command
+If you want to see the list of docker images
+
+``` bash
+docker images
+```
 Following are the mongo commands
 To see what does this container contains we can use ls
 ``` bash
@@ -92,3 +106,15 @@ show collections
 If we want to work with MongoDB in .NET core then we need to install
 > MongoDB.Driver
 
+Docker Volumes is used to store persistent data outside of the container
+
+If you want to stop Docker Image from running then following bash command need to be used
+
+``` bash
+docker stop a141
+```
+
+We can even remove docker image with the help of 
+``` bash
+docker rm a141
+```

@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <DockerComposeProjectPath>../../../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>9748e8c6-05f6-4c28-a114-ebd7abfb9005</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="MongoDB.Driver" Version="2.12.4" />
   </ItemGroup>
 
@@ -14,10 +16,12 @@
     <None Remove="MongoDB.Driver" />
     <None Remove="Entities\" />
     <None Remove="Data\" />
+    <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Entities\" />
     <Folder Include="Data\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>
